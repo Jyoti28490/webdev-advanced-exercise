@@ -6,6 +6,8 @@ Welcome to our programming exercise for Web Developers.
 
 Please provide a basic search page user interface, based on the Statista Search API data.
 
+Max. time: 3h
+
 For more details, please see below.
 
 ---
