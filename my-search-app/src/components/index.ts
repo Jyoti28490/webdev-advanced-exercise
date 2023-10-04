@@ -6,6 +6,8 @@ import TotalResult from './TotalResult';
 import NoSearchQuery from './NoSearchQuery';
 import Button from './Button';
 import ErrorDisplay from './ErrorDisplay';
+import Header from './Header';
+import Footer from './Footer';
 
 export {
   Loader,
@@ -16,4 +18,6 @@ export {
   NoSearchQuery,
   Button,
   ErrorDisplay,
+  Header,
+  Footer,
 };

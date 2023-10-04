@@ -576,7 +576,7 @@ section {
 @media only screen and (min-width: 768px) {
   .page__footerNav--small .navFlex__list {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0 -10px;
   }
 }

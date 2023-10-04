@@ -10,6 +10,8 @@ import {
   TotalResult,
   NoSearchQuery,
   ErrorDisplay,
+  Header,
+  Footer,
 } from './components';
 
 const App: React.FC = () => {
@@ -58,25 +60,31 @@ const App: React.FC = () => {
   }, [searchQuery]);
 
   return (
-    <div className="app-container">
-      <section className="app-container__header">
-        <SearchBar onSearch={handleSearch} />
+    <>
+      <Header />
+      <div className="hrPrimary--3"></div>
+
+      <section className="app-container">
+        <section className="app-container__header">
+          <SearchBar onSearch={handleSearch} />
+        </section>
+        <section className="app-container__main">
+          {searchQuery && <TotalResult resultsCount={searchData.length} />}
+          {loading ? (
+            <Loader />
+          ) : error ? (
+            <ErrorDisplay message={error} />
+          ) : searchQuery === '' ? (
+            <NoSearchQuery />
+          ) : searchData.length === 0 ? (
+            <NoResults />
+          ) : (
+            <SearchResults items={searchData as searchDataProps[]} />
+          )}
+        </section>
       </section>
-      <section className="app-container__main">
-        {searchQuery && <TotalResult resultsCount={searchData.length} />}
-        {loading ? (
-          <Loader />
-        ) : error ? (
-          <ErrorDisplay message={error} />
-        ) : searchQuery === '' ? (
-          <NoSearchQuery />
-        ) : searchData.length === 0 ? (
-          <NoResults />
-        ) : (
-          <SearchResults items={searchData as searchDataProps[]} />
-        )}
-      </section>
-    </div>
+      <Footer />
+    </>
   );
 };
 
