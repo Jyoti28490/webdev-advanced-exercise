@@ -1,12 +1,18 @@
-# Getting Started with Create React App
+# Clone the Repository
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+git clone https://github.com/Jyoti28490/webdev-advanced-exercise.git
 
-## Available Scripts
+# Change Directory to "my-search-app"
 
-In the project directory, you can run:
+cd webdev-advanced-exercise/my-search-app
 
-### `npm start`
+# Install Dependencies using npm
+
+npm install
+
+# Start the project
+
+npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
